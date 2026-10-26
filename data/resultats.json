@@ -1,0 +1,23 @@
+{
+  "resultats": [
+    { "id_evaluation": "E01", "note": 5.0,  "heures_preparation": 8,  "date": "2026-03-10" },
+    { "id_evaluation": "E02", "note": 4.5,  "heures_preparation": 3,  "date": "2026-04-02" },
+    { "id_evaluation": "E03", "note": 4.75, "heures_preparation": 15, "date": "2026-05-20" },
+
+    { "id_evaluation": "E04", "note": 5.5,  "heures_preparation": 20, "date": "2026-04-15" },
+    { "id_evaluation": "E05", "note": 5.0,  "heures_preparation": 2,  "date": "2026-03-25" },
+    { "id_evaluation": "E06", "note": 5.25, "heures_preparation": 12, "date": "2026-05-28" },
+
+    { "id_evaluation": "E07", "note": 3.75, "heures_preparation": 4,  "date": "2026-03-05" },
+    { "id_evaluation": "E08", "note": 4.25, "heures_preparation": 5,  "date": "2026-04-09" },
+    { "id_evaluation": "E09", "note": 4.0,  "heures_preparation": 18, "date": "2026-06-02" },
+
+    { "id_evaluation": "E10", "note": 4.5,  "heures_preparation": 6,  "date": "2026-10-01" },
+    { "id_evaluation": "E11", "note": 4.0,  "heures_preparation": 2,  "date": "2026-10-15" },
+
+    { "id_evaluation": "E13", "note": 5.25, "heures_preparation": 10, "date": "2026-10-20" },
+
+    { "id_evaluation": "E16", "note": 5.5,  "heures_preparation": 1,  "date": "2026-10-08" },
+    { "id_evaluation": "E17", "note": 4.75, "heures_preparation": 7,  "date": "2026-10-13" }
+  ]
+}

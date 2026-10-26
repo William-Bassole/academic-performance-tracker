@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<evaluations>
+  <!-- Algorithmique (C01) -->
+  <evaluation id="E01">
+    <id_cours>C01</id_cours>
+    <type>tp</type>
+    <coefficient>0.2</coefficient>
+  </evaluation>
+  <evaluation id="E02">
+    <id_cours>C01</id_cours>
+    <type>quiz</type>
+    <coefficient>0.2</coefficient>
+  </evaluation>
+  <evaluation id="E03">
+    <id_cours>C01</id_cours>
+    <type>examen_blanc</type>
+    <coefficient>0.6</coefficient>
+  </evaluation>
+
+  <!-- Bases de données (C02) -->
+  <evaluation id="E04">
+    <id_cours>C02</id_cours>
+    <type>projet</type>
+    <coefficient>0.4</coefficient>
+  </evaluation>
+  <evaluation id="E05">
+    <id_cours>C02</id_cours>
+    <type>quiz</type>
+    <coefficient>0.1</coefficient>
+  </evaluation>
+  <evaluation id="E06">
+    <id_cours>C02</id_cours>
+    <type>examen_blanc</type>
+    <coefficient>0.5</coefficient>
+  </evaluation>
+
+  <!-- Probabilités et statistique (C03) -->
+  <evaluation id="E07">
+    <id_cours>C03</id_cours>
+    <type>quiz</type>
+    <coefficient>0.2</coefficient>
+  </evaluation>
+  <evaluation id="E08">
+    <id_cours>C03</id_cours>
+    <type>quiz</type>
+    <coefficient>0.2</coefficient>
+  </evaluation>
+  <evaluation id="E09">
+    <id_cours>C03</id_cours>
+    <type>examen_blanc</type>
+    <coefficient>0.6</coefficient>
+  </evaluation>
+
+  <!-- Introduction à la microéconomie (C04) -->
+  <evaluation id="E10">
+    <id_cours>C04</id_cours>
+    <type>tp</type>
+    <coefficient>0.3</coefficient>
+  </evaluation>
+  <evaluation id="E11">
+    <id_cours>C04</id_cours>
+    <type>quiz</type>
+    <coefficient>0.2</coefficient>
+  </evaluation>
+  <evaluation id="E12">
+    <id_cours>C04</id_cours>
+    <type>examen_blanc</type>
+    <coefficient>0.5</coefficient>
+  </evaluation>
+
+  <!-- Mashup, contextualisation et qualité des services (C05) -->
+  <evaluation id="E13">
+    <id_cours>C05</id_cours>
+    <type>tp</type>
+    <coefficient>0.4</coefficient>
+  </evaluation>
+  <evaluation id="E14">
+    <id_cours>C05</id_cours>
+    <type>projet</type>
+    <coefficient>0.6</coefficient>
+  </evaluation>
+
+  <!-- Séminaire de langages de programmation (C06) -->
+  <evaluation id="E15">
+    <id_cours>C06</id_cours>
+    <type>projet</type>
+    <coefficient>0.5</coefficient>
+  </evaluation>
+  <evaluation id="E16">
+    <id_cours>C06</id_cours>
+    <type>quiz</type>
+    <coefficient>0.2</coefficient>
+  </evaluation>
+  <evaluation id="E17">
+    <id_cours>C06</id_cours>
+    <type>tp</type>
+    <coefficient>0.3</coefficient>
+  </evaluation>
+</evaluations>

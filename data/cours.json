@@ -1,0 +1,46 @@
+{
+  "cours": [
+    {
+      "id": "C01",
+      "nom": "Algorithmique",
+      "ects": 6,
+      "semestre": "Printemps 2026",
+      "objectif": 5.0
+    },
+    {
+      "id": "C02",
+      "nom": "Bases de données",
+      "ects": 6,
+      "semestre": "Printemps 2026",
+      "objectif": 5.5
+    },
+    {
+      "id": "C03",
+      "nom": "Probabilités et statistique",
+      "ects": 6,
+      "semestre": "Printemps 2026",
+      "objectif": 4.5
+    },
+    {
+      "id": "C04",
+      "nom": "Introduction à la microéconomie",
+      "ects": 6,
+      "semestre": "Automne 2026",
+      "objectif": 5.0
+    },
+    {
+      "id": "C05",
+      "nom": "Mashup, contextualisation et qualité des services",
+      "ects": 6,
+      "semestre": "Automne 2026",
+      "objectif": 5.0
+    },
+    {
+      "id": "C06",
+      "nom": "Séminaire de langages de programmation",
+      "ects": 3,
+      "semestre": "Automne 2026",
+      "objectif": 5.5
+    }
+  ]
+}
