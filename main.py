@@ -1,78 +1,81 @@
-"""
-Academic Performance Tracker - TP1 Mashup, Contextualisation et Qualité des Services
-Auteur : William Bassole
-
-Service local en ligne de commande qui combine 3 sources de données :
-- data/cours.json        (cours : id, nom, ects, semestre, objectif)
-- data/evaluations.xml   (évaluations : id, id_cours, type, coefficient)
-- data/resultats.json    (résultats : id_evaluation, note, heures_preparation, date)
-"""
-
 import json
 import xml.etree.ElementTree as ET
-from pathlib import Path
-
-DATA_DIR = Path(__file__).parent / "data"
 
 
-# ---------- 1. Chargement des sources ----------
+# Chargement des sources
+
+FICHIER_COURS = "data/cours.json"
+FICHIER_EVALUATIONS = "data/evaluations.xml"
+FICHIER_RESULTATS = "data/resultats.json"
 
 def charger_cours():
-    """Lit cours.json et retourne une liste de dictionnaires."""
-    # TODO
-    pass
-
+    with open(FICHIER_COURS) as file:
+        data = json.load(file)
+    return data["cours"]
 
 def charger_evaluations():
-    """Lit evaluations.xml et retourne une liste de dictionnaires
-    (même structure que le JSON pour simplifier la suite)."""
-    # TODO
-    pass
-
+    with open(FICHIER_EVALUATIONS) as file:
+        tree = ET.parse(file)
+        root = tree.getroot()
+        evaluations = []
+        for item in root:
+            evaluation = {}
+            evaluation["id"] = item.get("id")
+            for child in item:
+                evaluation[child.tag] = child.text
+            evaluation["coefficient"] = float(evaluation["coefficient"])
+            evaluations.append(evaluation)
+    return evaluations
 
 def charger_resultats():
-    """Lit resultats.json et retourne une liste de dictionnaires."""
-    # TODO
-    pass
+    with open(FICHIER_RESULTATS) as file:
+        data = json.load(file)
+    return data["resultats"]
 
 
-# ---------- 2. Scénarios ----------
-
-def scenario_recherche_cours():
-    # TODO : scénario 1
-    pass
-
-
-def scenario_cours_en_difficulte():
-    # TODO : scénario 2
-    pass
-
-
-def scenario_moyenne_semestre():
-    # TODO : scénario 3
-    pass
-
-
-def scenario_top3_difficiles():
-    # TODO : scénario 4
-    pass
-
-
-def scenario_bilan_global():
-    # TODO : scénario 5
-    pass
-
-
-# ---------- 3. Menu ----------
+# Menu 
 
 def main():
-    # Étape 1 : vérifier que le chargement fonctionne
-    print(charger_cours())
-    print(charger_evaluations())
-    print(charger_resultats())
+    charger_cours()
+    charger_evaluations()
+    charger_resultats()
 
-    # Étape 2 (plus tard) : boucle avec le menu des 5 scénarios + Quitter
+# if __name__ == "__main__":
+#     main()
+#     menu = true 
+#     while menu == true :
+#         print("Choisissez un scénario : (1-5)")
 
 
-if __name__ == "__main__":
-    main()
+
+
+
+
+
+# Scénarios
+
+def recherche_cours():
+    # TODO : scénario 1 - infos du cours, évaluations, notes et temps de préparation
+    pass
+
+
+def cours_en_difficulte():
+    # TODO : scénario 2 - cours dont la moyenne actuelle est inférieure à 5
+    pass
+
+
+def moyenne_semestre():
+    # TODO : scénario 3 - moyennes des cours et moyenne pondérée du semestre
+    pass
+
+
+def top3_cours_difficiles():
+    # TODO : scénario 4 - les 3 moyennes les plus faibles, avec objectif et écart
+    pass
+
+
+def bilan_global():
+    # TODO : scénario 5 - bilan croisant les 3 sources
+    pass
+
+
