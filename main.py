@@ -81,8 +81,14 @@ def moyenne_cours(id_cours, evals, res):
     return somme / somme_coef
 
 def recherche_cours(cours, evals, res):
-    # TODO : scénario 1 - infos du cours, évaluations, notes et temps de préparation
-    pass
+    recherche = input("Identifiant ou nom du cours : ").strip().lower()
+    trouve = None
+    for c in cours:
+        if c["id"].lower() == recherche or recherche in c["nom"].lower():
+            trouve = c
+    if trouve == None:
+        print("Aucun cours trouvé.\n")
+        return
 
 
 def cours_en_difficulte(cours, evals, res):
