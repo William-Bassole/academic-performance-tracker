@@ -39,7 +39,8 @@ def main():
     cours = charger_cours()
     evals = charger_evaluations()
     res = charger_resultats()
-
+    print(moyenne_cours("C01", evals, res))
+    print(moyenne_cours("C04", evals, res))
     menu = True
     while menu == True :
         choix = input("\nChoisissez un scénario : (0-5)\n\n\n-Scénario 1) Recherche d'un cours\n\n-Scénario 2) Cours en difficulté\n\n-Scénario 3) Moyennes\n\n-Scénario 4) Top 3 cours en difficulté avec objectifs\n\n-Scénario 5) Bilan\n\n-0) Quitter\n")
@@ -58,15 +59,26 @@ def main():
             menu = False
         else : print("\n\nVeuillez entrer un nombre entre 0 et 5\n\n\n")
 
-   
-
-
-
-
-
-
 
 # Scénarios
+def trouver_resultat(id_evaluation, res):
+    for resultat in res:
+        if resultat["id_evaluation"] == id_evaluation:
+            return resultat
+    return None
+ 
+def moyenne_cours(id_cours, evals, res):
+    somme = 0
+    somme_coef = 0
+    for evaluation in evals:
+        if evaluation["id_cours"] == id_cours:
+            resultat = trouver_resultat(evaluation["id"], res)
+            if resultat != None:
+                somme = somme + resultat["note"] * evaluation["coefficient"]
+                somme_coef = somme_coef + evaluation["coefficient"]
+    if somme_coef == 0:
+        return None
+    return somme / somme_coef
 
 def recherche_cours(cours, evals, res):
     # TODO : scénario 1 - infos du cours, évaluations, notes et temps de préparation
